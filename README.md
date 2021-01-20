@@ -1,0 +1,1 @@
+# SCCN-currency-bot
