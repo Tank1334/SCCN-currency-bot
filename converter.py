@@ -1,13 +1,16 @@
 import requests as reqst
 
 
-def api(currency):
+def convert(currency):
     response = reqst.get(f"http://api.shaycryptoco.in/price/{currency}")#requesting api to {currency} 
     json = response.json() #api-json
 
     json = json[currency] #checking specific currency
 
     text = f"The value of sccn to {currency} is {json}"  # formmating text
+
+    if text == f"The value of sccn to {currency} is Invalid ticker":
+        text = "Error, Please change it to the following: \"!test \{a currency code\}\" "
 
     return text #returning final value
 

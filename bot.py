@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
-import converter as api
-TOKEN = "ODAxNTkyMjM4Mzg3MzYzODUx.YAi68g.28JvvfLDVtOypMOYBr1jxK4nXSM"
+import converter
+TOKEN = "{bot token}"
 
 
 bot = commands.Bot(command_prefix='!')
@@ -15,7 +15,7 @@ async def on_ready():
 
 @bot.command()
 async def test(ctx, arg):
-    await ctx.send(f"The value of SCCN to {arg} is {api.api(str(arg))}")
+    await ctx.send(f"{converter.convert(str(arg))}")
 
 
 bot.run(TOKEN)
