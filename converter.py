@@ -10,7 +10,7 @@ def convert(currency):
     text = f"The value of sccn to {currency} is {json}"  # formmating text
 
     if text == f"The value of sccn to {currency} is Invalid ticker":
-        text = "Error, Please change it to the following: \"!test \{a currency code\}\" "
+        text = "Error, Please change it to the following: \"s<convert \{a currency code\}\" "
 
     return text #returning final value
 
